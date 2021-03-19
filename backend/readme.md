@@ -1,0 +1,2 @@
+goal 1: analyze past chess games. Rank lost games by most occured to a certain move. then analyze with stockfish to improve
+goal 2: analyze past chess games. Rank won games by most occured to a certain move. then analyze with stockfish to improve
