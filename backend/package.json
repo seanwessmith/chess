@@ -5,10 +5,10 @@
   "main": "get-archives.js",
   "dependencies": {
     "@nano-sql/core": "^2.3.7",
+    "moment": "^2.29.1",
     "node-fetch": "^2.6.1",
     "pgn-parser": "^2.0.0"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
