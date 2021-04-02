@@ -1,6 +1,6 @@
 const pgn = require('pgn-parser');
 
-const fields = ['site', 'date', 'white', 'black', 'result']
+const fields = ['site', 'date', 'white', 'black', 'result', 'currentposition', 'eco', 'ecourl', 'whiteelo', 'blackelo', 'starttime', 'endtime', 'link'];
 
 function values_row(id, game) {
   const ret = {};
@@ -14,14 +14,17 @@ function values_row(id, game) {
     }
   }
 
-  const gameArray = [];
-  if (game.moves) {
-    const moves = game.moves.map(m => m.move);
-    gameArray.push(moves.join(' '))
+  const gameMoves = [];
+  let currMove = 0;
+  for (const move of game.moves) {
+    if (currMove !== move.move_number) {
+      currMove = move.move_number;
+      gameMoves.push(`${currMove}.`);
+    }
+    gameMoves.push(move.move);
   }
-  const gameStr = gameArray.join(', ');
-  ret.moves = game.moves ? game.moves.length : 0;
-  ret.game = gameStr;
+
+  ret.moves = gameMoves.join(' ');
   return ret
 }
 const pgnToJson = (pgnFile) => {
