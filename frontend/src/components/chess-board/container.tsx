@@ -8,7 +8,7 @@ import {
   getPiecesTaken,
   PiecesTaken,
 } from '../../shared/fen';
-import backgroundImage from '../../images/backgrounds/icy_sea.png';
+import backgroundImage from '../../images/backgrounds/dark_wood.png';
 import { pgnToFen } from '../../shared/pgn-to-fen';
 import { getPgnMoveCount, PgnJson } from '../../shared/pgn';
 
