@@ -8,11 +8,11 @@ interface Props {
   pgn?: PgnJson;
 }
 
-const InfoRow = ({ title, description, icon, className }: { title: string; description?: string, icon: string, className: string }) => description ? (
+const InfoRow = ({ title, description, icon, className, type }: { title: string; description?: string, icon: string, className: string, type?: 'link' }) => description ? (
   <div className="info-row">
   <img className={className} src={icon} />
   <p className="title">{title}</p>
-  <p className='description'>{description}</p>
+  {type === 'link' ? <a className='description' href={description} target='_blank' rel='noopener noreferrer'>{description}</a> : <p className='description'>{description}</p>}
 </div>
 ) : null;
 
@@ -22,8 +22,8 @@ const InfoDisplay = (props: Props) => {
   return (
     <div className="info-container">
       <InfoRow className='opening' title='Opening' description={opening} icon={openingIcon} />
-      <InfoRow className='youtube-link' title='Youtube link' description={props.pgn?.youtube} icon={youtubeIcon} />
-      <InfoRow className='chess-link' title='Chess.com link' description={props.pgn?.link} icon={pawnIcon} />
+      <InfoRow className='youtube-link' title='Youtube link' description={props.pgn?.youtube} icon={youtubeIcon} type='link' />
+      <InfoRow className='chess-link' title='Chess.com link' description={props.pgn?.link} icon={pawnIcon} type='link' />
     </div>
   );
 };
