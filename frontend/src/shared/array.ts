@@ -1,9 +1,6 @@
-const deepCloneArray = (currentArray: (string[] | number[])[]): (string[] | number[])[] => {
-  return currentArray.map((arr: string[] | number[]) => {
-    return arr.slice();
-  });
-}
+const deepCloneArray = (currentArray: (string[] | number[])[]): (string[] | number[])[] =>
+  currentArray.map((arr: string[] | number[]) => arr.slice());
 
 export {
   deepCloneArray,
-}
+};

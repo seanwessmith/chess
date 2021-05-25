@@ -1,22 +1,22 @@
 import { useEffect, useState } from 'react';
-import Controls from './controls';
-import NameDisplay from './name-display';
-import InfoDisplay from './info-display';
+
+import backgroundImage from '../../images/backgrounds/bases.png';
 import {
   pieceToImage,
   FenPiece,
   getPiecesTaken,
   PiecesTaken,
 } from '../../shared/fen';
-import backgroundImage from '../../images/backgrounds/dark_wood.png';
+import { getPgnMoveCount, PgnJson, getCurrPgn } from '../../shared/pgn';
 import { pgnToFen } from '../../shared/pgn-to-fen';
-import { getPgnMoveCount, PgnJson } from '../../shared/pgn';
+import Controls from './controls';
+import InfoDisplay from './info-display';
+import NameDisplay from './name-display';
 
 import './container.scss';
-
 interface Props {
-  size: string;
-  pgn?: PgnJson;
+  size: number;
+  pgn?: Pick<PgnJson, 'moves'> & Partial<PgnJson>;
   move?: number;
 }
 
@@ -42,11 +42,12 @@ const buildSquare = ({
 );
 
 const ChessBoard = (props: Props): JSX.Element => {
+  const rotate = props.pgn?.black === 'SenseiDanya';
   const moves = JSON.parse(JSON.stringify(props.pgn?.moves || {}));
 
   const maxMoves = getPgnMoveCount(props.pgn?.moves);
-  const [PgnToFen, _setPgnToFen] = useState(new pgnToFen(moves, props.pgn?.speedRunId.toString() || ''));
-  const [move, setMove] = useState(0);
+  const [PgnToFen, _setPgnToFen] = useState(new pgnToFen(moves, props.pgn?.speedRunId?.toString() || ''));
+  const [move, setMove] = useState(props.move !== undefined ? props.move : 0);
 
   const [piecesTaken, setPiecesTaken] = useState<PiecesTaken>({
     white: [],
@@ -55,14 +56,13 @@ const ChessBoard = (props: Props): JSX.Element => {
   const [squares, setSquares] = useState<JSX.Element[]>([]);
 
   useEffect(() => {
-    console.log('iter PgnToFen: ', PgnToFen.key);
     const newFen = PgnToFen.getFen(move);
     if (!newFen) {
       return;
     }
     setPiecesTaken(getPiecesTaken(newFen));
 
-    const ranks = newFen.split(' ')[0].split('/');
+    const ranks = rotate ? newFen.split(' ')[0].split('/').reverse() : newFen.split(' ')[0].split('/');
     const newSquares = [];
     for (let rank = 7; rank >= 0; rank--) {
       let spaces = 0;
@@ -70,12 +70,12 @@ const ChessBoard = (props: Props): JSX.Element => {
         const piece = ranks[rank][file - spaces];
         // in a fen string ints are the amount of spaces to be added
         // iterate newSpaces and add to the newSquares array
-        if (parseInt(piece)) {
-          let newSpaces = parseInt(piece);
+        if (parseInt(piece, 10)) {
+          let newSpaces = parseInt(piece, 10);
           while (newSpaces > 0) {
             newSquares.push(
               buildSquare({
-                piece: parseInt(piece),
+                piece: parseInt(piece, 10),
                 rank,
                 file,
               })
@@ -101,28 +101,35 @@ const ChessBoard = (props: Props): JSX.Element => {
     setSquares(newSquares);
   }, [props.pgn, move]);
 
+  const currPgn = getCurrPgn(moves, move);
+
   return (
     <div
       style={{
-        width: props.size,
-        height: props.size,
+        width: `${props.size}px`,
+        height: `${props.size}px`,
       }}
-      className="chessboard-container"
+      className={`chessboard-container ${props.size < 500 ? 'small' : 'large'}`}
     >
-      <NameDisplay player='white' pgn={props.pgn} piecesTaken={piecesTaken} />
+      <NameDisplay color='white' player={props.pgn?.white} elo={props.pgn?.whiteelo} piecesTaken={piecesTaken} />
       <div className="inner-chessboard-container">
         <div
           style={{
             backgroundImage: `url(${backgroundImage})`,
           }}
-          className="chessboard"
+          className='chessboard'
         >
           {squares}
         </div>
         <Controls move={move} maxMoves={maxMoves} setMove={setMove} />
       </div>
-      <NameDisplay player='black' pgn={props.pgn} piecesTaken={piecesTaken} />
-      <InfoDisplay pgn={props.pgn} />
+      <NameDisplay color='black' player={props.pgn?.black} elo={props.pgn?.blackelo} piecesTaken={piecesTaken} />
+      <InfoDisplay
+        ecourl={props.pgn?.ecourl}
+        youtube={props.pgn?.youtube}
+        link={props.pgn?.link}
+        currPgn={currPgn}
+      />
     </div>
   );
 };

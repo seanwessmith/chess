@@ -1,29 +1,98 @@
-import { PgnJson } from '../../shared/pgn';
-import { getOpening } from '../../shared/pgn';
+import { useContext } from 'react';
+
 import openingIcon from '../../images/icons/book.svg';
-import youtubeIcon from '../../images/icons/youtube.svg';
 import pawnIcon from '../../images/icons/pawn.svg';
+import youtubeIcon from '../../images/icons/youtube.svg';
+import { getOpening } from '../../shared/pgn';
+import { UserContext } from '../../store/userContext';
 
 interface Props {
-  pgn?: PgnJson;
+  ecourl?: string;
+  youtube?: string;
+  link?: string;
+  wins?: number;
+  losses?: number;
+  ties?: number;
+  currPgn?: string;
 }
 
-const InfoRow = ({ title, description, icon, className, type }: { title: string; description?: string, icon: string, className: string, type?: 'link' }) => description ? (
-  <div className="info-row">
-  <img className={className} src={icon} />
-  <p className="title">{title}</p>
-  {type === 'link' ? <a className='description' href={description} target='_blank' rel='noopener noreferrer'>{description}</a> : <p className='description'>{description}</p>}
-</div>
-) : null;
+const InfoRow = ({
+  title,
+  description,
+  icon,
+  className,
+  type,
+}: {
+  title: string;
+  description?: string;
+  icon: string;
+  className: string;
+  type?: 'link';
+}) =>
+  description ? (
+    <div className='info-row'>
+      <img className={className} src={icon} />
+      <p className='title'>{title}</p>
+      {type === 'link' ? (
+        <a
+          className='description'
+          href={description}
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          {description}
+        </a>
+      ) : (
+        <p className='description'>{description}</p>
+      )}
+    </div>
+  ) : null;
 
 const InfoDisplay = (props: Props) => {
-  const opening = getOpening(props.pgn?.ecourl);
+  const { user } = useContext(UserContext);
+  const opening = getOpening(props.ecourl);
+  const { currPgn } = props;
+  const openingInfo = opening && user.openings ? user.openings[opening] : null;
+
+  if (!props.ecourl && !props.youtube && !props.link) {
+    return null;
+  }
+
+  const positionsFound = user.games && currPgn ? user.games.filter(g => g.moves.includes(currPgn)) : [];
 
   return (
-    <div className="info-container">
-      <InfoRow className='opening' title='Opening' description={opening} icon={openingIcon} />
-      <InfoRow className='youtube-link' title='Youtube link' description={props.pgn?.youtube} icon={youtubeIcon} type='link' />
-      <InfoRow className='chess-link' title='Chess.com link' description={props.pgn?.link} icon={pawnIcon} type='link' />
+    <div className='info-container'>
+      {openingInfo ? (
+        <p className='user-opening-info'>
+          wins: {openingInfo.wins} losses: {openingInfo.losses} ties:{' '}
+          {openingInfo.ties}
+        </p>
+      ) : null}
+      <p className={!props.currPgn ? 'invisible' : ''}>You've seen this position {positionsFound.length} times</p>
+      <p className={!props.currPgn ? 'invisible' : ''}>
+        w/ white: {positionsFound.filter(g => g.white === user.username).length}{' '}
+        w/ black: {positionsFound.filter(g => g.black === user.username).length}
+      </p>
+      <InfoRow
+        className='opening'
+        title='Opening'
+        description={opening}
+        icon={openingIcon}
+      />
+      <InfoRow
+        className='youtube-link'
+        title='Youtube link'
+        description={props.youtube}
+        icon={youtubeIcon}
+        type='link'
+      />
+      <InfoRow
+        className='chess-link'
+        title='Chess.com link'
+        description={props.link}
+        icon={pawnIcon}
+        type='link'
+      />
     </div>
   );
 };

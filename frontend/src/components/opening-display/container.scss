@@ -1,0 +1,15 @@
+.opening-display {
+  display: flex;
+  padding: 10px 0;
+  flex-direction: row;
+  align-items: flex-start;
+
+  .details {
+    text-align: left;
+    padding: 0 20px;
+    p {
+      color: white; 
+      font-size: 16px;
+    }
+  }
+}

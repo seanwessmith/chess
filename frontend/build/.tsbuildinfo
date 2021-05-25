@@ -221,6 +221,11 @@
         "signature": "1e61418f41d404e744b6536af9f8c6f6674dd4d54c12335cd0c4f7eded69cf3f",
         "affectsGlobalScope": true
       },
+      "../src/types.d.ts": {
+        "version": "bdb85d9ee3f7b221dcf18464e996d17d58fca229675025b4f9f9da5acaafc650",
+        "signature": "bdb85d9ee3f7b221dcf18464e996d17d58fca229675025b4f9f9da5acaafc650",
+        "affectsGlobalScope": false
+      },
       "../node_modules/@types/react/global.d.ts": {
         "version": "ecf78e637f710f340ec08d5d92b3f31b134a46a4fcf2e758690d8c46ce62cba6",
         "signature": "ecf78e637f710f340ec08d5d92b3f31b134a46a4fcf2e758690d8c46ce62cba6",
@@ -251,63 +256,18 @@
         "signature": "af7fd2870746deed40e130fc0a3966de74e8f52a97ec114d0fbb35876ab05ca9",
         "affectsGlobalScope": false
       },
-      "../node_modules/web-vitals/dist/modules/types.d.ts": {
-        "version": "6231095d0b356894ceec8856ce4e354a38a773a62067978f3af9c478acbcf2e9",
-        "signature": "6231095d0b356894ceec8856ce4e354a38a773a62067978f3af9c478acbcf2e9",
-        "affectsGlobalScope": true
-      },
-      "../node_modules/web-vitals/dist/modules/getCLS.d.ts": {
-        "version": "66754e21a2ac3ffc0eb3fc55cf5c33deb2c115b726fb2c4368b870c5e85106ce",
-        "signature": "66754e21a2ac3ffc0eb3fc55cf5c33deb2c115b726fb2c4368b870c5e85106ce",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/web-vitals/dist/modules/getFCP.d.ts": {
-        "version": "ccd9f8f7c8760d8eb0c0c112c772a9756d59365a61fd5cc102a889fed79d0076",
-        "signature": "ccd9f8f7c8760d8eb0c0c112c772a9756d59365a61fd5cc102a889fed79d0076",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/web-vitals/dist/modules/getFID.d.ts": {
-        "version": "d7ccbcf0e92d0209f499729768c791fbc278ecad02c3f596db5b519eb4f5d496",
-        "signature": "d7ccbcf0e92d0209f499729768c791fbc278ecad02c3f596db5b519eb4f5d496",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/web-vitals/dist/modules/getLCP.d.ts": {
-        "version": "85542ea0f889f8993e6b4631c541640c17c230bf5cf18d483184de9105536b4d",
-        "signature": "85542ea0f889f8993e6b4631c541640c17c230bf5cf18d483184de9105536b4d",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/web-vitals/dist/modules/getTTFB.d.ts": {
-        "version": "8cc2eed7caa0e187fae67a1e7fdb4da79079489744c6e5be9e0839d258fd5995",
-        "signature": "8cc2eed7caa0e187fae67a1e7fdb4da79079489744c6e5be9e0839d258fd5995",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/web-vitals/dist/modules/index.d.ts": {
-        "version": "aaf2cc4016c33c836fcca0dbe20d7a97bf17cafeb581a57a62267b1c38930bd4",
-        "signature": "aaf2cc4016c33c836fcca0dbe20d7a97bf17cafeb581a57a62267b1c38930bd4",
-        "affectsGlobalScope": false
-      },
-      "../src/reportWebVitals.ts": {
-        "version": "dd853520f94653943f3ffdd5413294d52ce89018b4582f557a4e4af537760462",
-        "signature": "a98523704b2b3a9bbf9cb286edc535ae903e1d647a31d3d3cb1cfa336e38c0d4",
-        "affectsGlobalScope": false
-      },
-      "../src/types.d.ts": {
-        "version": "aeb2d9a4b5343a2a6a4a635ee35879b1750cf701428478d1648eebc28710406b",
-        "signature": "aeb2d9a4b5343a2a6a4a635ee35879b1750cf701428478d1648eebc28710406b",
-        "affectsGlobalScope": false
-      },
       "../src/shared/array.ts": {
-        "version": "5990fe20b53012d69d75739d3aa01366fd3f63921c6521229c1430e033baef05",
+        "version": "a0cd8190e24d4efafb69d6521cdf47ff98dd1ecaa6d6bfd9caf41f13067b1458",
         "signature": "656b889e5e1968794cd3581e083a3291225fcefb4bc996c10bbabfa8b104fab1",
         "affectsGlobalScope": false
       },
       "../src/shared/fen.ts": {
-        "version": "c6de29cc5f975697146a5f76de3e6bfe0fae8098982d9d7a64fca8f8ae5f0cba",
+        "version": "a920ab96b83be81f1c9902336b0db2c8cd1ed90a197e4029c96bdcde62552911",
         "signature": "8ec9e2f26212b78d567fec35491d0bfcc9ab1ffe59b678efb5b59352fda413b7",
         "affectsGlobalScope": false
       },
       "../src/shared/pgn-to-fen-conts.ts": {
-        "version": "31ff7d35eccb62637e0b2ee72ee7cbe8572846cccf2c029f670eb06672628c91",
+        "version": "5ec4f5bbfb48a9a4cf84e62cf97c8cd96664c38b2983e9efa77b5d1f455b2180",
         "signature": "6ecb93cf724547697227b91856aa3ca628fabd7b254f28cfa98188df57a61798",
         "affectsGlobalScope": false
       },
@@ -377,52 +337,142 @@
         "affectsGlobalScope": true
       },
       "../src/shared/pgn-to-fen.ts": {
-        "version": "6db98dd27d2efcb6c463398046428f911489c088c077ea13cf7bd4a54e5c7dc9",
+        "version": "4796dbc6e158c13b1649b68424ce58e844494e2772771290284f2d2b45646176",
         "signature": "97b25022c6304ed81673268d7319dfd58332bffe25ee1d67a62a6bac57893857",
         "affectsGlobalScope": false
       },
+      "../src/data/short-hand-opening.json": {
+        "version": "e76609b94fb14472a638dbe1396386b44cf87433a12980af151669a97fdf1d7f",
+        "signature": "7e2eff3e1139fb63fcd72a2f1a53a7781e30bb509305e0dfa8c552779f607e88",
+        "affectsGlobalScope": true
+      },
       "../src/shared/pgn.ts": {
-        "version": "5f06bd2fb82b617ec1b097690f6516a47863bbd102aebfa21fe61996994b4232",
-        "signature": "1f43cf0ab55a09d66a9a2cf6290426fd568a3cf507b6ce3275c76c102b65a6ff",
+        "version": "34862bf175e868641c629e561e6a0b47cb713cec39a46f1e72caca41051b7759",
+        "signature": "3bbdf5ae6a11ab14749b172c95f31bc5ca79528d4a1a3bb9bc895faf17c42ab2",
+        "affectsGlobalScope": false
+      },
+      "../src/shared/pgn-to-json.ts": {
+        "version": "4ea575f66068d78320c5142f022ec2c6ddd0bce89685c0fd1670dfa37098ef9c",
+        "signature": "c13532f20fe659774b007d0305542dbd721ba9fc210211a782b4c379d764a053",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/history/DOMUtils.d.ts": {
+        "version": "271cde49dfd9b398ccc91bb3aaa43854cf76f4d14e10fed91cbac649aa6cbc63",
+        "signature": "271cde49dfd9b398ccc91bb3aaa43854cf76f4d14e10fed91cbac649aa6cbc63",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/@types/history/createBrowserHistory.d.ts": {
+        "version": "c6f2572e21f626260d2e4a65e4e1e42b9b273b6f43b5c3bc115c2926417d3eca",
+        "signature": "c6f2572e21f626260d2e4a65e4e1e42b9b273b6f43b5c3bc115c2926417d3eca",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/history/createHashHistory.d.ts": {
+        "version": "374ab77e05e0bf5a52acad6d65121d4bd31068108f23d70186dba5fcd7d6a1a3",
+        "signature": "374ab77e05e0bf5a52acad6d65121d4bd31068108f23d70186dba5fcd7d6a1a3",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/history/createMemoryHistory.d.ts": {
+        "version": "a4ecd4bb653aa71093375845fba6250ca0f3c633d0e933fc9bf4b301834eab27",
+        "signature": "a4ecd4bb653aa71093375845fba6250ca0f3c633d0e933fc9bf4b301834eab27",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/history/LocationUtils.d.ts": {
+        "version": "25d91fb9ed77a828cc6c7a863236fb712dafcd52f816eec481bd0c1f589f4404",
+        "signature": "25d91fb9ed77a828cc6c7a863236fb712dafcd52f816eec481bd0c1f589f4404",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/history/PathUtils.d.ts": {
+        "version": "4cd14cea22eed1bfb0dc76183e56989f897ac5b14c0e2a819e5162eafdcfe243",
+        "signature": "4cd14cea22eed1bfb0dc76183e56989f897ac5b14c0e2a819e5162eafdcfe243",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/history/index.d.ts": {
+        "version": "cc53cba64efb30576f2a36f1d7107e4453e84cbd0f371d49cd1dfd208e11233b",
+        "signature": "cc53cba64efb30576f2a36f1d7107e4453e84cbd0f371d49cd1dfd208e11233b",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/react-router/index.d.ts": {
+        "version": "19c52e85a2883919428465fd109f2db63575485c07930eba56b5aee5f3a1e90f",
+        "signature": "19c52e85a2883919428465fd109f2db63575485c07930eba56b5aee5f3a1e90f",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/react-router-dom/index.d.ts": {
+        "version": "b89701b714364b5bcb0b58e83725aa02a4f41df8357000b4e8fe60566bf805ac",
+        "signature": "b89701b714364b5bcb0b58e83725aa02a4f41df8357000b4e8fe60566bf805ac",
         "affectsGlobalScope": false
       },
       "../src/components/chess-board/controls.tsx": {
-        "version": "3cfc9619934e8d9547deb402cb7b3c8fbf40b6699b582032e2c4bf710dea756e",
+        "version": "cf511852b8b703b0dcf3f87013a35641c388f4364a0b92880c57f4567c95a9db",
         "signature": "284d610fefbe1d10fac7f556067a15db1f05858b211e5d0c24571f0d925a5643",
         "affectsGlobalScope": false
       },
-      "../src/components/chess-board/name-display.tsx": {
-        "version": "26341afd1caf4506273b367fb4d47b1ef191d887d99195ae2075f6211173ba2c",
-        "signature": "05ee245c3c98ffaa6d605483453a34803ba9fe919c97f0463dea47426b5a6bb8",
+      "../node_modules/moment/ts3.1-typings/moment.d.ts": {
+        "version": "f97edc4d3b4dd0b32766e9633086497565c37657fb591cc84a35864db4bc2fc5",
+        "signature": "f97edc4d3b4dd0b32766e9633086497565c37657fb591cc84a35864db4bc2fc5",
+        "affectsGlobalScope": false
+      },
+      "../src/actions/getChesscomGames.tsx": {
+        "version": "b2ea0f2ea77d12338c8c1c45c400d051cf4a0d9d26a31cb48c76445b67793ee0",
+        "signature": "59f81b3794914f6d2acbcc92c4cc74e69281a7d020d68dc264ea213672f0fbaf",
+        "affectsGlobalScope": false
+      },
+      "../src/store/userContext.tsx": {
+        "version": "79c3cf085824f9d220cbf9c0c28710a0d41e26693afc65dccee78c803a3d605f",
+        "signature": "54b26ab5411251db89b173411c88d913d9cb787c175bf8dcc25db73905f8ad9b",
         "affectsGlobalScope": false
       },
       "../src/components/chess-board/info-display.tsx": {
-        "version": "54e924d8043a4fbfa35ba8b1153a24f1f870b8dce99ca868f939b8ffd40ec139",
-        "signature": "e690348b724b0a4b0a465179d975862ed7fc46e9b1bfcc6dbec5af51a901cfa9",
+        "version": "2f31056ba9eb36aa049faee88f07bfcc09ad937d76b382dddd57d7b9031cf9f8",
+        "signature": "6d9cd673055ad1c1e7e23ac7ac2ba92908ab5698c94cde89e9859490f044070f",
+        "affectsGlobalScope": false
+      },
+      "../src/components/chess-board/name-display.tsx": {
+        "version": "8a4cad20bc30f2b952305231470b2a49108a4456d64a12cf35d6fd9f23fd72a4",
+        "signature": "480ed50b0c7a36d75bad7a3454ac64bbb81a2ebe0493114f53d725261b3ebd30",
         "affectsGlobalScope": false
       },
       "../src/components/chess-board/container.tsx": {
-        "version": "ba0a0f8ba1e72f761f945328c7043ba19114a4a190790457a9fd7af95d2775c8",
-        "signature": "65131a2d8559235fc1379b48b643a6979ccdc562d3a7f9a3de99fe304166fc3c",
+        "version": "41fd1e572efb9b0b13c5baed9b7a5ddfe292ce6f8cb039d65c1dc9692eb16f73",
+        "signature": "5c241496b753ab134056e6791931f2aaa05e40e210fcecf890a79f4da4ef78d6",
+        "affectsGlobalScope": false
+      },
+      "../src/components/opening-display/container.tsx": {
+        "version": "625e22d1cbb6fd5f300bda9192e817be571624e5a406245e5c0786d9435206f9",
+        "signature": "60af6d93f6bce600f610304416da5951d73a754e0afd7b108720edd333f1ea22",
+        "affectsGlobalScope": false
+      },
+      "../src/components/achievements/container.tsx": {
+        "version": "68cbb36e9b365599d289c0783ba5c4aa0f43fb2f4ef74f3295919420eeb165dc",
+        "signature": "6862a9d830192dc0b41f95b0235fcd48e2c26e49516abb9b3706ab339dfd171f",
+        "affectsGlobalScope": false
+      },
+      "../src/components/modals/import-userdata.tsx": {
+        "version": "892ab804ca39890feac307b7ae2489bd063deb54449f3ed643bddbc1d1171952",
+        "signature": "69c62bbddf6fbf187646b0ff777d6bbcee987105c95ab42895528f7f900cccd7",
         "affectsGlobalScope": false
       },
       "../src/components/rank-selector/container.tsx": {
-        "version": "5b71b1b4d528b028a8a19d8cdcae6fb762dea114949852b929c7a1dc1578935e",
-        "signature": "8d062fd084e0ad3da41ad5a63d9153ff1eb00f1885204fe85ce8a0acb2c4743a",
+        "version": "6872ae03e88a83cdf5bb2c3bd84960ea099179223f3f69ddbd4714967fdb591f",
+        "signature": "bc8543696da8a88240f270094448f5659a71b49ffebf58cfed4df42107f912af",
         "affectsGlobalScope": false
       },
       "../src/data/speedrun-games.json": {
-        "version": "0028c9a8dd33bf108c62a28997e9a035d81425ff541ba8e80e172a46f3df142f",
+        "version": "e6281431833da0311019f38f82e1485407513b052df8dd61c8c2b94be61695a4",
         "signature": "c2bbcdf568166b18f900239b913ca52548882313b06c39d0f598e0f467624415",
         "affectsGlobalScope": true
       },
       "../src/modules/chessbook/container.tsx": {
-        "version": "f82b1a75ac9f31b018faae1ed3472288828e75b7258122f46f86275a05e8ef3b",
+        "version": "2cb959c578a0988b281693e5a282cfe295fc0ae48d51ea26fd3827d07938db79",
         "signature": "2371834034420c7e269b0f3400c6ecaad2a703c16982ed77e600287959c9c9d5",
         "affectsGlobalScope": false
       },
+      "../src/modules/view-pgn/container.tsx": {
+        "version": "8187399efad77cea5cd439778123f9179030d135a0c18b0611f4ef235e7995cc",
+        "signature": "073ee370051c4b42917824d6e95773122a9603dbfe0deb858cdbe345c1f36d9e",
+        "affectsGlobalScope": false
+      },
       "../src/App.tsx": {
-        "version": "e6aaa99092f3cfc1a426de8f809f92e1ca5d494acdc77339322184753fa33514",
+        "version": "69b366eb46a602896c3d8430a0c91ac30fb08ae2a6936f84fa4b79ce4cd675c7",
         "signature": "41aa031d5c56c0af95635527cea19c0e0fdebe620dee11adf19c0961674706ee",
         "affectsGlobalScope": false
       },
@@ -432,7 +482,7 @@
         "affectsGlobalScope": false
       },
       "../src/index.tsx": {
-        "version": "408695e727c7424fabf315fb65230177e82569a0bb4b58f5fd04665c3508eed1",
+        "version": "4b4c136eadbe9ec682f21ca358b2543325baebad673ff993b779e8c2befce7f7",
         "signature": "1d718b0153bdcd004326fa3ecd0bb1fd90857c3a585991c660faea15fb327776",
         "affectsGlobalScope": false
       },
@@ -877,6 +927,31 @@
         "../node_modules/@types/node/events.d.ts",
         "../node_modules/@types/node/index.d.ts"
       ],
+      "../node_modules/@types/history/LocationUtils.d.ts": [
+        "../node_modules/@types/history/index.d.ts"
+      ],
+      "../node_modules/@types/history/PathUtils.d.ts": [
+        "../node_modules/@types/history/index.d.ts"
+      ],
+      "../node_modules/@types/history/createBrowserHistory.d.ts": [
+        "../node_modules/@types/history/DOMUtils.d.ts",
+        "../node_modules/@types/history/index.d.ts"
+      ],
+      "../node_modules/@types/history/createHashHistory.d.ts": [
+        "../node_modules/@types/history/DOMUtils.d.ts",
+        "../node_modules/@types/history/index.d.ts"
+      ],
+      "../node_modules/@types/history/createMemoryHistory.d.ts": [
+        "../node_modules/@types/history/DOMUtils.d.ts",
+        "../node_modules/@types/history/index.d.ts"
+      ],
+      "../node_modules/@types/history/index.d.ts": [
+        "../node_modules/@types/history/LocationUtils.d.ts",
+        "../node_modules/@types/history/PathUtils.d.ts",
+        "../node_modules/@types/history/createBrowserHistory.d.ts",
+        "../node_modules/@types/history/createHashHistory.d.ts",
+        "../node_modules/@types/history/createMemoryHistory.d.ts"
+      ],
       "../node_modules/@types/http-proxy/index.d.ts": [
         "../node_modules/@types/node/events.d.ts",
         "../node_modules/@types/node/http.d.ts",
@@ -1309,6 +1384,15 @@
       "../node_modules/@types/react-dom/index.d.ts": [
         "../node_modules/@types/react/index.d.ts"
       ],
+      "../node_modules/@types/react-router-dom/index.d.ts": [
+        "../node_modules/@types/history/index.d.ts",
+        "../node_modules/@types/react-router/index.d.ts",
+        "../node_modules/@types/react/index.d.ts"
+      ],
+      "../node_modules/@types/react-router/index.d.ts": [
+        "../node_modules/@types/history/index.d.ts",
+        "../node_modules/@types/react/index.d.ts"
+      ],
       "../node_modules/@types/react/index.d.ts": [
         "../node_modules/@types/prop-types/index.d.ts",
         "../node_modules/@types/react/global.d.ts",
@@ -1341,32 +1425,23 @@
       "../node_modules/pretty-format/build/index.d.ts": [
         "../node_modules/pretty-format/build/types.d.ts"
       ],
-      "../node_modules/web-vitals/dist/modules/getCLS.d.ts": [
-        "../node_modules/web-vitals/dist/modules/types.d.ts"
-      ],
-      "../node_modules/web-vitals/dist/modules/getFCP.d.ts": [
-        "../node_modules/web-vitals/dist/modules/types.d.ts"
-      ],
-      "../node_modules/web-vitals/dist/modules/getFID.d.ts": [
-        "../node_modules/web-vitals/dist/modules/types.d.ts"
-      ],
-      "../node_modules/web-vitals/dist/modules/getLCP.d.ts": [
-        "../node_modules/web-vitals/dist/modules/types.d.ts"
-      ],
-      "../node_modules/web-vitals/dist/modules/getTTFB.d.ts": [
-        "../node_modules/web-vitals/dist/modules/types.d.ts"
-      ],
-      "../node_modules/web-vitals/dist/modules/index.d.ts": [
-        "../node_modules/web-vitals/dist/modules/getCLS.d.ts",
-        "../node_modules/web-vitals/dist/modules/getFCP.d.ts",
-        "../node_modules/web-vitals/dist/modules/getFID.d.ts",
-        "../node_modules/web-vitals/dist/modules/getLCP.d.ts",
-        "../node_modules/web-vitals/dist/modules/getTTFB.d.ts",
-        "../node_modules/web-vitals/dist/modules/types.d.ts"
-      ],
       "../src/App.tsx": [
+        "../node_modules/@types/react-router-dom/index.d.ts",
         "../node_modules/@types/react/jsx-runtime.d.ts",
-        "../src/modules/chessbook/container.tsx"
+        "../src/modules/chessbook/container.tsx",
+        "../src/modules/view-pgn/container.tsx",
+        "../src/store/userContext.tsx"
+      ],
+      "../src/actions/getChesscomGames.tsx": [
+        "../node_modules/@types/react/jsx-runtime.d.ts",
+        "../node_modules/moment/ts3.1-typings/moment.d.ts",
+        "../src/shared/pgn-to-json.ts",
+        "../src/shared/pgn.ts"
+      ],
+      "../src/components/achievements/container.tsx": [
+        "../node_modules/@types/react/jsx-runtime.d.ts",
+        "../src/components/opening-display/container.tsx",
+        "../src/shared/pgn.ts"
       ],
       "../src/components/chess-board/container.tsx": [
         "../node_modules/@types/react/index.d.ts",
@@ -1384,17 +1459,33 @@
         "../src/types.d.ts"
       ],
       "../src/components/chess-board/info-display.tsx": [
+        "../node_modules/@types/react/index.d.ts",
         "../node_modules/@types/react/jsx-runtime.d.ts",
         "../src/shared/pgn.ts",
+        "../src/store/userContext.tsx",
         "../src/types.d.ts"
       ],
       "../src/components/chess-board/name-display.tsx": [
         "../node_modules/@types/react/jsx-runtime.d.ts",
-        "../src/shared/fen.ts",
-        "../src/shared/pgn.ts"
+        "../src/shared/fen.ts"
+      ],
+      "../src/components/modals/import-userdata.tsx": [
+        "../node_modules/@types/react/index.d.ts",
+        "../node_modules/@types/react/jsx-runtime.d.ts",
+        "../src/store/userContext.tsx"
+      ],
+      "../src/components/opening-display/container.tsx": [
+        "../node_modules/@types/react/index.d.ts",
+        "../node_modules/@types/react/jsx-runtime.d.ts",
+        "../src/components/chess-board/container.tsx",
+        "../src/shared/pgn.ts",
+        "../src/store/userContext.tsx"
       ],
       "../src/components/rank-selector/container.tsx": [
         "../node_modules/@types/react/index.d.ts",
+        "../node_modules/@types/react/jsx-runtime.d.ts"
+      ],
+      "../src/data/short-hand-opening.json": [
         "../node_modules/@types/react/jsx-runtime.d.ts"
       ],
       "../src/data/speedrun-games.json": [
@@ -1404,20 +1495,23 @@
         "../node_modules/@types/react-dom/index.d.ts",
         "../node_modules/@types/react/index.d.ts",
         "../node_modules/@types/react/jsx-runtime.d.ts",
-        "../src/App.tsx",
-        "../src/reportWebVitals.ts"
+        "../src/App.tsx"
       ],
       "../src/modules/chessbook/container.tsx": [
         "../node_modules/@types/react/index.d.ts",
         "../node_modules/@types/react/jsx-runtime.d.ts",
+        "../src/components/achievements/container.tsx",
         "../src/components/chess-board/container.tsx",
+        "../src/components/modals/import-userdata.tsx",
         "../src/components/rank-selector/container.tsx",
         "../src/data/speedrun-games.json",
+        "../src/shared/pgn.ts",
+        "../src/store/userContext.tsx",
         "../src/types.d.ts"
       ],
-      "../src/reportWebVitals.ts": [
+      "../src/modules/view-pgn/container.tsx": [
         "../node_modules/@types/react/jsx-runtime.d.ts",
-        "../node_modules/web-vitals/dist/modules/index.d.ts"
+        "../src/components/chess-board/container.tsx"
       ],
       "../src/shared/array.ts": [
         "../node_modules/@types/react/jsx-runtime.d.ts"
@@ -1434,8 +1528,21 @@
         "../node_modules/@types/react/jsx-runtime.d.ts",
         "../src/shared/pgn-to-fen-conts.ts"
       ],
+      "../src/shared/pgn-to-json.ts": [
+        "../node_modules/@types/react/jsx-runtime.d.ts",
+        "../src/shared/pgn.ts",
+        "../src/types.d.ts"
+      ],
       "../src/shared/pgn.ts": [
-        "../node_modules/@types/react/jsx-runtime.d.ts"
+        "../node_modules/@types/react/jsx-runtime.d.ts",
+        "../src/data/short-hand-opening.json"
+      ],
+      "../src/store/userContext.tsx": [
+        "../node_modules/@types/react/index.d.ts",
+        "../node_modules/@types/react/jsx-runtime.d.ts",
+        "../node_modules/moment/ts3.1-typings/moment.d.ts",
+        "../src/actions/getChesscomGames.tsx",
+        "../src/shared/pgn.ts"
       ]
     },
     "exportedModulesMap": {
@@ -1457,6 +1564,31 @@
         "../node_modules/@types/node/events.d.ts",
         "../node_modules/@types/node/index.d.ts"
       ],
+      "../node_modules/@types/history/LocationUtils.d.ts": [
+        "../node_modules/@types/history/index.d.ts"
+      ],
+      "../node_modules/@types/history/PathUtils.d.ts": [
+        "../node_modules/@types/history/index.d.ts"
+      ],
+      "../node_modules/@types/history/createBrowserHistory.d.ts": [
+        "../node_modules/@types/history/DOMUtils.d.ts",
+        "../node_modules/@types/history/index.d.ts"
+      ],
+      "../node_modules/@types/history/createHashHistory.d.ts": [
+        "../node_modules/@types/history/DOMUtils.d.ts",
+        "../node_modules/@types/history/index.d.ts"
+      ],
+      "../node_modules/@types/history/createMemoryHistory.d.ts": [
+        "../node_modules/@types/history/DOMUtils.d.ts",
+        "../node_modules/@types/history/index.d.ts"
+      ],
+      "../node_modules/@types/history/index.d.ts": [
+        "../node_modules/@types/history/LocationUtils.d.ts",
+        "../node_modules/@types/history/PathUtils.d.ts",
+        "../node_modules/@types/history/createBrowserHistory.d.ts",
+        "../node_modules/@types/history/createHashHistory.d.ts",
+        "../node_modules/@types/history/createMemoryHistory.d.ts"
+      ],
       "../node_modules/@types/http-proxy/index.d.ts": [
         "../node_modules/@types/node/events.d.ts",
         "../node_modules/@types/node/http.d.ts",
@@ -1889,6 +2021,15 @@
       "../node_modules/@types/react-dom/index.d.ts": [
         "../node_modules/@types/react/index.d.ts"
       ],
+      "../node_modules/@types/react-router-dom/index.d.ts": [
+        "../node_modules/@types/history/index.d.ts",
+        "../node_modules/@types/react-router/index.d.ts",
+        "../node_modules/@types/react/index.d.ts"
+      ],
+      "../node_modules/@types/react-router/index.d.ts": [
+        "../node_modules/@types/history/index.d.ts",
+        "../node_modules/@types/react/index.d.ts"
+      ],
       "../node_modules/@types/react/index.d.ts": [
         "../node_modules/@types/prop-types/index.d.ts",
         "../node_modules/@types/react/global.d.ts",
@@ -1921,41 +2062,27 @@
       "../node_modules/pretty-format/build/index.d.ts": [
         "../node_modules/pretty-format/build/types.d.ts"
       ],
-      "../node_modules/web-vitals/dist/modules/getCLS.d.ts": [
-        "../node_modules/web-vitals/dist/modules/types.d.ts"
+      "../src/actions/getChesscomGames.tsx": [
+        "../src/shared/pgn.ts"
       ],
-      "../node_modules/web-vitals/dist/modules/getFCP.d.ts": [
-        "../node_modules/web-vitals/dist/modules/types.d.ts"
-      ],
-      "../node_modules/web-vitals/dist/modules/getFID.d.ts": [
-        "../node_modules/web-vitals/dist/modules/types.d.ts"
-      ],
-      "../node_modules/web-vitals/dist/modules/getLCP.d.ts": [
-        "../node_modules/web-vitals/dist/modules/types.d.ts"
-      ],
-      "../node_modules/web-vitals/dist/modules/getTTFB.d.ts": [
-        "../node_modules/web-vitals/dist/modules/types.d.ts"
-      ],
-      "../node_modules/web-vitals/dist/modules/index.d.ts": [
-        "../node_modules/web-vitals/dist/modules/getCLS.d.ts",
-        "../node_modules/web-vitals/dist/modules/getFCP.d.ts",
-        "../node_modules/web-vitals/dist/modules/getFID.d.ts",
-        "../node_modules/web-vitals/dist/modules/getLCP.d.ts",
-        "../node_modules/web-vitals/dist/modules/getTTFB.d.ts",
-        "../node_modules/web-vitals/dist/modules/types.d.ts"
+      "../src/components/achievements/container.tsx": [
+        "../src/shared/pgn.ts"
       ],
       "../src/components/chess-board/container.tsx": [
         "../src/shared/pgn.ts"
       ],
-      "../src/components/chess-board/info-display.tsx": [
-        "../src/shared/pgn.ts"
-      ],
       "../src/components/chess-board/name-display.tsx": [
-        "../src/shared/fen.ts",
+        "../src/shared/fen.ts"
+      ],
+      "../src/components/opening-display/container.tsx": [
         "../src/shared/pgn.ts"
       ],
-      "../src/reportWebVitals.ts": [
-        "../node_modules/web-vitals/dist/modules/index.d.ts"
+      "../src/shared/pgn-to-json.ts": [
+        "../src/shared/pgn.ts"
+      ],
+      "../src/store/userContext.tsx": [
+        "../node_modules/@types/react/index.d.ts",
+        "../src/shared/pgn.ts"
       ]
     },
     "semanticDiagnosticsPerFile": [
@@ -1966,6 +2093,13 @@
       "../node_modules/@types/eslint/lib/rules/index.d.ts",
       "../node_modules/@types/estree/index.d.ts",
       "../node_modules/@types/glob/index.d.ts",
+      "../node_modules/@types/history/DOMUtils.d.ts",
+      "../node_modules/@types/history/LocationUtils.d.ts",
+      "../node_modules/@types/history/PathUtils.d.ts",
+      "../node_modules/@types/history/createBrowserHistory.d.ts",
+      "../node_modules/@types/history/createHashHistory.d.ts",
+      "../node_modules/@types/history/createMemoryHistory.d.ts",
+      "../node_modules/@types/history/index.d.ts",
       "../node_modules/@types/html-minifier-terser/index.d.ts",
       "../node_modules/@types/http-proxy/index.d.ts",
       "../node_modules/@types/istanbul-lib-coverage/index.d.ts",
@@ -2037,6 +2171,8 @@
       "../node_modules/@types/parse-json/index.d.ts",
       "../node_modules/@types/prop-types/index.d.ts",
       "../node_modules/@types/react-dom/index.d.ts",
+      "../node_modules/@types/react-router-dom/index.d.ts",
+      "../node_modules/@types/react-router/index.d.ts",
       "../node_modules/@types/react/global.d.ts",
       "../node_modules/@types/react/index.d.ts",
       "../node_modules/@types/react/jsx-runtime.d.ts",
@@ -2052,6 +2188,7 @@
       "../node_modules/jest-diff/build/index.d.ts",
       "../node_modules/jest-diff/build/printDiffs.d.ts",
       "../node_modules/jest-diff/build/types.d.ts",
+      "../node_modules/moment/ts3.1-typings/moment.d.ts",
       "../node_modules/pretty-format/build/index.d.ts",
       "../node_modules/pretty-format/build/types.d.ts",
       "../node_modules/typescript/lib/lib.dom.d.ts",
@@ -2098,29 +2235,79 @@
       "../node_modules/typescript/lib/lib.esnext.promise.d.ts",
       "../node_modules/typescript/lib/lib.esnext.string.d.ts",
       "../node_modules/typescript/lib/lib.esnext.weakref.d.ts",
-      "../node_modules/web-vitals/dist/modules/getCLS.d.ts",
-      "../node_modules/web-vitals/dist/modules/getFCP.d.ts",
-      "../node_modules/web-vitals/dist/modules/getFID.d.ts",
-      "../node_modules/web-vitals/dist/modules/getLCP.d.ts",
-      "../node_modules/web-vitals/dist/modules/getTTFB.d.ts",
-      "../node_modules/web-vitals/dist/modules/index.d.ts",
-      "../node_modules/web-vitals/dist/modules/types.d.ts",
       "../src/App.tsx",
+      "../src/actions/getChesscomGames.tsx",
+      "../src/components/achievements/container.tsx",
       "../src/components/chess-board/container.tsx",
       "../src/components/chess-board/controls.tsx",
       "../src/components/chess-board/info-display.tsx",
       "../src/components/chess-board/name-display.tsx",
+      "../src/components/modals/import-userdata.tsx",
+      "../src/components/opening-display/container.tsx",
       "../src/components/rank-selector/container.tsx",
+      "../src/data/short-hand-opening.json",
       "../src/data/speedrun-games.json",
       "../src/index.tsx",
       "../src/modules/chessbook/container.tsx",
-      "../src/reportWebVitals.ts",
+      "../src/modules/view-pgn/container.tsx",
       "../src/shared/array.ts",
       "../src/shared/fen.ts",
       "../src/shared/pgn-to-fen-conts.ts",
       "../src/shared/pgn-to-fen.ts",
+      "../src/shared/pgn-to-json.ts",
       "../src/shared/pgn.ts",
+      "../src/store/userContext.tsx",
       "../src/types.d.ts"
+    ],
+    "affectedFilesPendingEmit": [
+      [
+        "../src/App.tsx",
+        0
+      ],
+      [
+        "../src/actions/getChesscomGames.tsx",
+        0
+      ],
+      [
+        "../src/components/achievements/container.tsx",
+        0
+      ],
+      [
+        "../src/components/chess-board/container.tsx",
+        0
+      ],
+      [
+        "../src/components/chess-board/info-display.tsx",
+        0
+      ],
+      [
+        "../src/components/modals/import-userdata.tsx",
+        0
+      ],
+      [
+        "../src/components/opening-display/container.tsx",
+        0
+      ],
+      [
+        "../src/index.tsx",
+        0
+      ],
+      [
+        "../src/modules/chessbook/container.tsx",
+        0
+      ],
+      [
+        "../src/modules/view-pgn/container.tsx",
+        0
+      ],
+      [
+        "../src/shared/pgn-to-json.ts",
+        0
+      ],
+      [
+        "../src/store/userContext.tsx",
+        0
+      ]
     ]
   },
   "version": "4.2.4"

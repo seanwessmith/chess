@@ -12,19 +12,15 @@
     "@types/react": "^17.0.3",
     "@types/react-dom": "^17.0.3",
     "chess.js": "^0.11.0",
-    "css-loader": "^5.2.4",
     "lodash": "^4.17.21",
-    "node-sass": "^5.0.0",
+    "moment": "^2.29.1",
     "pgn-parser": "^2.1.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "sass": "^1.32.10",
-    "sass-loader": "^11.0.1",
-    "style-loader": "^2.0.0",
-    "web-vitals": "^1.1.1"
+    "react-router-dom": "^5.2.0"
   },
   "scripts": {
-    "start": "npx webpack serve  --hot --open --mode development",
+    "start": "npx webpack serve  --hot --mode development",
     "build": "webpack --mode production"
   },
   "eslintConfig": {
@@ -46,15 +42,24 @@
     ]
   },
   "devDependencies": {
+    "@types/react-router-dom": "^5.1.7",
+    "@typescript-eslint/eslint-plugin": "^4.23.0",
+    "@typescript-eslint/parser": "^4.23.0",
     "clean-webpack-plugin": "*",
+    "css-loader": "^5.2.4",
     "eslint": "^7.24.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "^4.2.0",
     "fork-ts-checker-webpack-plugin": "^6.2.1",
     "html-webpack-plugin": "^5.3.1",
+    "node-sass": "^5.0.0",
     "process": "^0.11.10",
+    "sass": "^1.32.10",
+    "sass-loader": "^11.0.1",
+    "style-loader": "^2.0.0",
     "ts-loader": "^9.0.0",
     "typescript": "^4.2.4",
     "webpack": "^5.34.0",

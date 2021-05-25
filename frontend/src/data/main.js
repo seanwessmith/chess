@@ -12,7 +12,7 @@ const getOpening = ecourl => {
 const main = () => {
   const openings = {};
   for (const datum of data) {
-    if (datum.white === 'SenseiDanya') {
+    if (datum.black === 'SenseiDanya') {
       // add to opening array
       const opening = getOpening(datum.ecourl);
       if (!openings[opening]) {

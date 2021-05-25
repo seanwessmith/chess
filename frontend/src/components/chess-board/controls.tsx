@@ -1,6 +1,6 @@
-import skipPrevious from '../../images/nav/skip-previous.svg';
-import skipNext from '../../images/nav/skip-next.svg';
 import arrow from '../../images/nav/arrow.svg';
+import skipNext from '../../images/nav/skip-next.svg';
+import skipPrevious from '../../images/nav/skip-previous.svg';
 
 interface Props {
   move: number;

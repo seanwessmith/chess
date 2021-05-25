@@ -265,7 +265,6 @@ class pgnToFen {
         if (llst < 0) ssub = ffull.substring(ffst);
         else ssub = ffull.substring(ffst, llst);
         mmove0 = this.GetMove(ssub, this.MoveType);
-        console.log('mmove0: ', mmove0);
         if (mmove0 != '') {
           if (this.ParseMove(mmove0, true) > 0) {
             mmove1 = mmove0;
@@ -1032,16 +1031,12 @@ class pgnToFen {
 
     const diff = move - this.currentMove;
 
-    console.log(this.key, 'move', move, 'currentMove: ', this.currentMove, 'this.MoveCount', this.MoveCount);
-
     if (diff > 0) {
       this.MoveForward(diff);
     } else {
       this.MoveBackward(Math.abs(diff));
     }
     ff_new = this.BuildFen();
-
-    console.log(this.key, 'ff_new: ', ff_new);
 
     if (ff_new !== ff_old) {
       this.currentMove += diff;

@@ -1,15 +1,15 @@
-import whiteKnight from '../images/pieces/white-knight.png';
-import whiteRook from '../images/pieces/white-rook.png';
-import whiteBishop from '../images/pieces/white-bishop.png';
-import whitePawn from '../images/pieces/white-pawn.png';
-import whiteQueen from '../images/pieces/white-queen.png';
-import whiteKing from '../images/pieces/white-king.png';
-import blackKnight from '../images/pieces/black-knight.png';
-import blackRook from '../images/pieces/black-rook.png';
 import blackBishop from '../images/pieces/black-bishop.png';
+import blackKing from '../images/pieces/black-king.png';
+import blackKnight from '../images/pieces/black-knight.png';
 import blackPawn from '../images/pieces/black-pawn.png';
 import blackQueen from '../images/pieces/black-queen.png';
-import blackKing from '../images/pieces/black-king.png';
+import blackRook from '../images/pieces/black-rook.png';
+import whiteBishop from '../images/pieces/white-bishop.png';
+import whiteKing from '../images/pieces/white-king.png';
+import whiteKnight from '../images/pieces/white-knight.png';
+import whitePawn from '../images/pieces/white-pawn.png';
+import whiteQueen from '../images/pieces/white-queen.png';
+import whiteRook from '../images/pieces/white-rook.png';
 
 export type FenPiece =
   | 'p'
@@ -107,7 +107,7 @@ const getPiecesTaken = (fen: string): PiecesTaken => {
   const pieces: PiecesTaken = { white: [], black: [] };
   pieceCounts.map(({ piece, count, color }) => {
     const regex = new RegExp(piece, 'g');
-    const newCount = Math.abs((splitFen.match(regex)?.length || count) - count);
+    const newCount = Math.abs((splitFen.match(regex)?.length || 0) - count);
     pieces[color].push({ piece, count: newCount });
   });
 

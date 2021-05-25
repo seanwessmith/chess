@@ -1,0 +1,13 @@
+.view-pgn-module {
+  width: 100%;
+  .chessboards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0;
+
+    .chessboard-container {
+      margin-bottom: 130px;
+    }
+  }
+}

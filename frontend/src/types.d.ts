@@ -7,11 +7,39 @@ declare module '*.svg' {
   export = value;
 }
 
-declare module "*.pgn" {
+declare module '*.pgn' {
   const value: string;
   export = value;
 }
-declare module "*.json" {
+declare module '*.json' {
   const value: string;
   export = value;
+}
+
+declare module 'pgn-parser' {
+  type Header =
+    | 'site'
+    | 'date'
+    | 'white'
+    | 'black'
+    | 'result'
+    | 'currentposition'
+    | 'eco'
+    | 'ecourl'
+    | 'whiteelo'
+    | 'blackelo'
+    | 'starttime'
+    | 'endtime'
+    | 'link';
+  interface PgnParsedGames {
+    headers: {
+      name: string;
+      value: string;
+    }[];
+    moves: {
+      move_number: number;
+      move: number;
+    }[];
+  }
+  function parse(str: string): PgnParsedGames[];
 }

@@ -301,7 +301,7 @@ const allOpenings = {
   'Petrovs Defense Classical Paulsen Attack': { count: 1, ranks: [2400] },
 };
 
-const danyaOpenings = {
+const danyaWhiteOpenings = {
   'Italian Game': { count: 2, ranks: [ 1000, 1600 ] },
   'Queens Pawn Opening Borg Defense': { count: 1, ranks: [ 1000 ] },
   'Pirc Defense Small Center Defense': { count: 2, ranks: [ 1000, 1800 ] },
@@ -363,6 +363,80 @@ const danyaOpenings = {
   'Indian Game 2.Nc3': { count: 1, ranks: [ 2400 ] },
   'Petrovs Defense Classical Paulsen Attack': { count: 1, ranks: [ 2400 ] }
 }
+
+const danyaBlackOpenings = {
+  'Scotch Game Classical Intermezzo Variation': { count: 1, ranks: [ 1000 ] },
+  'Kings Pawn Opening Wayward Queen Attack 2...Nc6 3.Bc4': { count: 1, ranks: [ 1000 ] },
+  'Bishops Opening Berlin Ponziani Gambit 3...exd4': { count: 1, ranks: [ 1000 ] },
+  'Barnes Opening 1...e5': { count: 1, ranks: [ 1000 ] },
+  'Van Geet Opening Reversed Nimzowitsch Variation 2.e3': { count: 1, ranks: [ 1000 ] },
+  'Four Knights Game Scotch Variation Accepted 5.Nxd4 Bc5': { count: 1, ranks: [ 1000 ] },
+  'Scotch Game Classical Variation 5.Nxc6': { count: 1, ranks: [ 1000 ] },
+  'Kings Fianchetto Opening 1...e5 2.Bg2 d5': { count: 1, ranks: [ 1000 ] },
+  'Queens Pawn Opening Accelerated London System': { count: 1, ranks: [ 1000 ] },
+  'Kings Pawn Opening Napoleon Attack': { count: 1, ranks: [ 1100 ] },
+  'Sicilian Defense Bowdler Attack': {
+    count: 8,
+    ranks: [
+      1200, 1200, 1300,
+      1500, 1500, 1700,
+      2000, 2100
+    ]
+  },
+  'Ruy Lopez Opening Morphy Defense Anderssen Variation 5...b5': { count: 1, ranks: [ 1200 ] },
+  'Queens Gambit Declined Three Knights Harrwitz Attack': { count: 1, ranks: [ 1200 ] },
+  'Kings Gambit Accepted Modern Abbazia Defense': { count: 1, ranks: [ 1300 ] },
+  'Sicilian Defense Old Sicilian Open Accelerated Dragon Variation': { count: 2, ranks: [ 1300, 1500 ] },
+  'Sicilian Defense Smith Morra Gambit 2...cxd4 3.Qxd4 Nc6': { count: 1, ranks: [ 1300 ] },
+  'Sicilian Defense Closed Traditional Line 3.Nf3': { count: 2, ranks: [ 1300, 1300 ] },
+  'Sicilian Defense Open Accelerated Dragon Exchange Variation': { count: 2, ranks: [ 1400, 1600 ] },
+  'Kings Pawn Opening Kings Knight Variation': { count: 1, ranks: [ 1400 ] },
+  'Sicilian Defense McDonnell Attack 2...d5 3.e5': { count: 3, ranks: [ 1400, 1700, 1700 ] },
+  'Indian Game': { count: 1, ranks: [ 1400 ] },
+  'Indian Game Basque Opening': { count: 1, ranks: [ 1400 ] },
+  'Kings Indian Defense Smyslov Variation': { count: 1, ranks: [ 1500 ] },
+  'Kings Indian Defense Zinnowitz Variation': { count: 1, ranks: [ 1500 ] },
+  'Sicilian Defense Old Sicilian Variation': { count: 1, ranks: [ 1500 ] },
+  'Birds Opening Dutch Variation 2.Nf3': { count: 1, ranks: [ 1500 ] },
+  'Sicilian Defense Keres Variation': { count: 1, ranks: [ 1600 ] },
+  'Giuoco Piano Game Center Attack Greco Moller Attack 9...Bf6': { count: 1, ranks: [ 1600 ] },
+  'Ruy Lopez Opening Morphy Defense Closed Pilnik Variation': { count: 1, ranks: [ 1600 ] },
+  'Sicilian Defense Alapin Variation 2...d5': { count: 1, ranks: [ 1600 ] },
+  'Queens Pawn Opening Zukertort Variation': { count: 1, ranks: [ 1700 ] },
+  'Sicilian Defense': { count: 1, ranks: [ 1700 ] },
+  'Sicilian Defense Staunton Cochrane Variation': { count: 2, ranks: [ 1700, 1800 ] },
+  'Kings Indian Defense Normal Variation 4.e4 d6': { count: 1, ranks: [ 1800 ] },
+  'Ponziani Opening Ponziani Countergambit 4.d4': { count: 1, ranks: [ 1800 ] },
+  'Sicilian Defense Open Accelerated Dragon Modern Variation...6.Be3 Nf6 7.Bc4 O O 8.f3': { count: 1, ranks: [ 1800 ] },
+  'Modern Defense with 1 e4 2.d4 Bg7': { count: 1, ranks: [ 1900 ] },
+  'Modern Defense with 1 d4': { count: 1, ranks: [ 1900 ] },
+  'Indian Game Knights Variation East Indian Defense 3.e3 Bg7': { count: 1, ranks: [ 1900 ] },
+  'Sicilian Defense Smith Morra Gambit Declined Alapin Formation': { count: 1, ranks: [ 1900 ] },
+  'Sicilian Defense Alapin Variation 2...Nc6 3.Nf3': { count: 1, ranks: [ 2000 ] },
+  'Kings Indian Defense Gligoric System 7...exd4': { count: 1, ranks: [ 2000 ] },
+  'Pirc Defense Main Line Austrian Attack 4...Bg7': { count: 1, ranks: [ 2000 ] },
+  'Indian Game Knights Variation': { count: 2, ranks: [ 2000, 2100 ] },
+  'Sicilian Defense Open Accelerated Dragon Maroczy Bind Formation 5...d6': { count: 1, ranks: [ 2100 ] },
+  'Kings Indian Defense Orthodox Variation...8.Nxd4 Re8 9.f3 c6 10.Kh1': { count: 1, ranks: [ 2100 ] },
+  'Alekhines Defense Normal Variation': { count: 1, ranks: [ 2100 ] },
+  'Kings Indian Defense Fianchetto Variation 4...O O': { count: 2, ranks: [ 2100, 2300 ] },
+  'Sicilian Defense Nyezhmetdinov Rossolimo Fianchetto Variation 4.Bxc6 dxc6': { count: 1, ranks: [ 2200 ] },
+  'Slav Defense Modern Alapin Variation Czech Classical Dutch Variation': { count: 1, ranks: [ 2200 ] },
+  'Modern Defense with 1 e4 2.d4 Bg7 3.Nf3 d6': { count: 2, ranks: [ 2200, 2300 ] },
+  'Torre Attack Fianchetto Defense 4.e3': { count: 1, ranks: [ 2200 ] },
+  'Four Knights Game Spanish Variation Rubinstein Accepted Exchange Variation...7.exf6 Qxf6 8.dxc3 Bc5': { count: 1, ranks: [ 2200 ] },
+  'Alekhines Defense Samisch Attack': { count: 1, ranks: [ 2200 ] },
+  'English Opening Four Knights Variation': { count: 1, ranks: [ 2300 ] },
+  'French Defense Classical Burn Morozevich Line 7.Nf3 b6': { count: 1, ranks: [ 2300 ] },
+  'Kings Indian Defense 3.Nf3': { count: 1, ranks: [ 2300 ] },
+  'Sicilian Defense Nyezhmetdinov Rossolimo Fianchetto Variation 4.Bxc6 dxc6 5.d3 Bg7 6.h3': { count: 1, ranks: [ 2300 ] },
+  'Sicilian Defense Nyezhmetdinov Rossolimo Fianchetto Variation 4.O O Bg7 5.Re1 e5 6.c3': { count: 1, ranks: [ 2400 ] },
+  'Nimzowitsch Larsen Attack English Variation': { count: 1, ranks: [ 2400 ] },
+  'Queens Pawn Opening Accelerated London Steinitz Countergambit': { count: 1, ranks: [ 2400 ] },
+  'Ruy Lopez Opening Berlin Defense 4.d3 d6': { count: 1, ranks: [ 2400 ] },
+  'Sicilian Defense Alapin Variation Barmen Defense 4.d4 Nc6 5.Nf3 Bg4': { count: 1, ranks: [ 2400 ] },
+  'Sicilian Defense Open Accelerated Dragon Modern Variation 5...Bg7 6.Be3 Nf6': { count: 1, ranks: [ 1900 ] }
+};
 
 const openingShort = [
   'Alekhine\'s Defense',
@@ -456,8 +530,8 @@ const main = () => {
   const groupedOpenings = {};
   rankGroups.map(({ min, max }) => (groupedOpenings[`${min}-${max}`] = []));
   for (const group of rankGroups) {
-    for (const opening of Object.keys(danyaOpenings)) {
-      for (const rank of danyaOpenings[opening].ranks) {
+    for (const opening of Object.keys(danyaBlackOpenings)) {
+      for (const rank of danyaBlackOpenings[opening].ranks) {
         if (rank === group.min) {
           groupedOpenings[`${group.min}-${group.max}`].push(
             getShortOpening(opening)

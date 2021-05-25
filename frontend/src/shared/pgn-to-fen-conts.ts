@@ -87,12 +87,15 @@ for (let ii = 0; ii < 8; ii++) {
   }
 }
 for (let ii = 0; ii < 2; ii++) {
-  for (let jj = 0; jj < 16; jj++)
+  for (let jj = 0; jj < 16; jj++) {
     Board[PiecePosX[ii][jj]][PiecePosY[ii][jj]] =
       (PieceType[ii][jj] + 1) * (1 - 2 * ii);
+  }
 }
 for (let ii = 0; ii < 2; ii++) {
-  for (let jj = 0; jj < 2; jj++) Castling[ii][jj] = 1;
+  for (let jj = 0; jj < 2; jj++) {
+    Castling[ii][jj] = 1;
+  }
 }
 
 const PieceName = 'KQRBNP';
@@ -125,4 +128,4 @@ export {
   PiecePosX,
   PiecePosY,
   PieceType,
-}
+};
