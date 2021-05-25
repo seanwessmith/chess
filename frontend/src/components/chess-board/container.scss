@@ -101,6 +101,15 @@
       visibility: hidden;
     }
 
+    .position {
+      text-align: left;
+      padding-left: 10px;
+
+      span {
+        float: right;
+      }
+    }
+
     .info-row {
       position: relative;
       text-align: left;

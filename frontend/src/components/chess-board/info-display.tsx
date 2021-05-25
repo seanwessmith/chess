@@ -68,10 +68,12 @@ const InfoDisplay = (props: Props) => {
           {openingInfo.ties}
         </p>
       ) : null}
-      <p className={!props.currPgn ? 'invisible' : ''}>You've seen this position {positionsFound.length} times</p>
-      <p className={!props.currPgn ? 'invisible' : ''}>
-        w/ white: {positionsFound.filter(g => g.white === user.username).length}{' '}
-        w/ black: {positionsFound.filter(g => g.black === user.username).length}
+      <p className={`position${!props.currPgn ? ' invisible' : ''}`}>
+        You've seen this position {positionsFound.length} times
+        <span className={!props.currPgn ? 'invisible' : ''}>
+          W: {positionsFound.filter(g => g.white === user.username).length}{' '}
+          B: {positionsFound.filter(g => g.black === user.username).length}
+        </span>
       </p>
       <InfoRow
         className='opening'

@@ -1,6 +1,6 @@
 import React, { useEffect, useReducer } from 'react';
 
-import moment from 'moment';
+import format from 'date-fns/format';
 
 import getChessComGames from '../actions/getChesscomGames';
 import {
@@ -100,7 +100,7 @@ function UserProvider(props: Props) {
         openings,
         fetchGames: false,
         fetchedGames: true,
-        lastUpdatedDate: moment().format('MM/DD/YY HH:mm'),
+        lastUpdatedDate: format(new Date(), 'MM/DD/YY HH:mm'),
       });
     };
     if (user.username && user.fetchGames && !user.fetchedGames) {

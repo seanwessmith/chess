@@ -1,6 +1,7 @@
 /* eslint-disable */
 
-import _ from 'lodash';
+import cloneDeep from 'lodash/cloneDeep';
+import clone from 'lodash/clone';
 import * as CONSTANTS from './pgn-to-fen-conts';
 
 class pgnToFen {
@@ -35,34 +36,34 @@ class pgnToFen {
   key: string;
   constructor(pgn: string, key: string) {
     this.key = key;
-    this.Board = _.cloneDeep(CONSTANTS.Board);
+    this.Board = cloneDeep(CONSTANTS.Board);
     this.CanPass = -1;
-    this.Castling =  _.cloneDeep(CONSTANTS.Castling);
+    this.Castling =  cloneDeep(CONSTANTS.Castling);
     this.currentMove = 0;
     this.CurVar = 0;
-    this.CurVar = _.clone(CONSTANTS.CurVar);
-    this.EnPass = _.clone(CONSTANTS.EnPass);
-    this.FenString = _.clone(CONSTANTS.FenString);
-    this.HalfMove = _.cloneDeep(CONSTANTS.HalfMove);
-    this.HistCommand = _.cloneDeep(new Array(CONSTANTS.MaxMove + 1));
-    this.HistMove = _.cloneDeep(new Array(CONSTANTS.MaxMove));
-    this.HistPiece = _.cloneDeep(CONSTANTS.HistPiece);
-    this.HistPosX = _.cloneDeep(CONSTANTS.HistPosX);
-    this.HistPosY = _.cloneDeep(CONSTANTS.HistPosY);
-    this.HistType = _.cloneDeep(CONSTANTS.HistType);
-    this.MaxMove = _.cloneDeep(CONSTANTS.MaxMove);
-    this.MoveArray = _.cloneDeep(CONSTANTS.MoveArray);
+    this.CurVar = clone(CONSTANTS.CurVar);
+    this.EnPass = clone(CONSTANTS.EnPass);
+    this.FenString = clone(CONSTANTS.FenString);
+    this.HalfMove = cloneDeep(CONSTANTS.HalfMove);
+    this.HistCommand = cloneDeep(new Array(CONSTANTS.MaxMove + 1));
+    this.HistMove = cloneDeep(new Array(CONSTANTS.MaxMove));
+    this.HistPiece = cloneDeep(CONSTANTS.HistPiece);
+    this.HistPosX = cloneDeep(CONSTANTS.HistPosX);
+    this.HistPosY = cloneDeep(CONSTANTS.HistPosY);
+    this.HistType = cloneDeep(CONSTANTS.HistType);
+    this.MaxMove = cloneDeep(CONSTANTS.MaxMove);
+    this.MoveArray = cloneDeep(CONSTANTS.MoveArray);
     this.MoveCount = 0;
     this.MoveType = 0;
-    this.NewCommands = _.cloneDeep(CONSTANTS.NewCommands);
-    this.PieceCode = _.cloneDeep(CONSTANTS.PieceCode);
-    this.PieceMoves = _.cloneDeep(CONSTANTS.PieceMoves);
-    this.PieceName = _.cloneDeep(CONSTANTS.PieceName);
-    this.PiecePosX = _.cloneDeep(CONSTANTS.PiecePosX);
-    this.PiecePosY = _.cloneDeep(CONSTANTS.PiecePosY);
-    this.PieceType = _.cloneDeep(CONSTANTS.PieceType);
+    this.NewCommands = cloneDeep(CONSTANTS.NewCommands);
+    this.PieceCode = cloneDeep(CONSTANTS.PieceCode);
+    this.PieceMoves = cloneDeep(CONSTANTS.PieceMoves);
+    this.PieceName = cloneDeep(CONSTANTS.PieceName);
+    this.PiecePosX = cloneDeep(CONSTANTS.PiecePosX);
+    this.PiecePosY = cloneDeep(CONSTANTS.PiecePosY);
+    this.PieceType = cloneDeep(CONSTANTS.PieceType);
     this.RecordCount = 0;
-    this.ShortPgnMoveText = _.cloneDeep([[pgn], [], []]);
+    this.ShortPgnMoveText = cloneDeep([[pgn], [], []]);
     this.StartMove = 0;
   }
 

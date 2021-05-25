@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import backgroundImage from '../../images/backgrounds/bases.png';
+import backgroundImage from '../../images/backgrounds/bases.jpg';
 import {
   pieceToImage,
   FenPiece,

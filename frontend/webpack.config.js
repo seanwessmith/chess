@@ -9,6 +9,7 @@ module.exports = {
   entry: {
     main: path.join(__dirname, 'src', 'index.tsx'),
   },
+  target: 'web',
   output: {
     path: path.join(__dirname, 'build'),
     filename: 'bundle.[contenthash].js', // Adds a hash code when there are changes on the code
