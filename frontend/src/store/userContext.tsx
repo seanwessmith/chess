@@ -100,7 +100,7 @@ function UserProvider(props: Props) {
         openings,
         fetchGames: false,
         fetchedGames: true,
-        lastUpdatedDate: format(new Date(), 'MM/DD/YY HH:mm'),
+        lastUpdatedDate: format(new Date(), 'MM/dd/yy HH:mm'),
       });
     };
     if (user.username && user.fetchGames && !user.fetchedGames) {

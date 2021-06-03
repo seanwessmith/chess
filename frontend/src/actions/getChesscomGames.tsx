@@ -12,12 +12,12 @@ interface Props {
 }
 
 const getChessComGames = async (props: Props): Promise<PgnJson[]> => {
-  const startDate = sub(startOfMonth(new Date()), { years: 1 });
+  let startDate = sub(startOfMonth(new Date()), { years: 1 });
   const endDate = new Date();
 
   let jsonGames: PgnJson[] = [];
   while (isBefore(startDate, endDate)) {
-    const year = format(startDate, 'YYYY');
+    const year = format(startDate, 'yyyy');
     const month = format(startDate, 'MM');
     const pgnGames = await fetch(
       `https://api.chess.com/pub/player/${props.username}/games/${year}/${month}/pgn`
@@ -25,7 +25,7 @@ const getChessComGames = async (props: Props): Promise<PgnJson[]> => {
 
     jsonGames = [...jsonGames, ...pgnToJson(pgnGames)];
 
-    add(startDate, { months: 1 });
+    startDate = add(startDate, { months: 1 });
   }
 
   return jsonGames;
