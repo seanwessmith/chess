@@ -52,7 +52,7 @@ const InfoDisplay = (props: Props) => {
   const { user } = useContext(UserContext);
   const opening = getOpening(props.ecourl);
   const { currPgn } = props;
-  const openingInfo = opening && user.openings ? user.openings[opening] : null;
+  // const openingInfo = opening && user.openings ? user.openings[opening] : null;
 
   if (!props.ecourl && !props.youtube && !props.link) {
     return null;
@@ -62,12 +62,12 @@ const InfoDisplay = (props: Props) => {
 
   return (
     <div className='info-container'>
-      {openingInfo ? (
+      {/* {openingInfo ? (
         <p className='user-opening-info'>
           wins: {openingInfo.wins} losses: {openingInfo.losses} ties:{' '}
           {openingInfo.ties}
         </p>
-      ) : null}
+      ) : null} */}
       <p className={`position${!props.currPgn ? ' invisible' : ''}`}>
         You've seen this position {positionsFound.length} times
         <span className={!props.currPgn ? 'invisible' : ''}>

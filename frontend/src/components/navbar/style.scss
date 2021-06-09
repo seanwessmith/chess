@@ -1,0 +1,68 @@
+nav {
+  padding: 12px 38px;
+  text-align: left;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+  position: relative;
+
+  h1 {
+    color: white;
+  }
+  .hello {
+    color: white;
+    &.invisible {
+      visibility: hidden;
+    }
+  }
+  .loading:after {
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: bottom;
+    -webkit-animation: ellipsis steps(4, end) 900ms infinite;
+    animation: ellipsis steps(4, end) 1400ms infinite;
+    content: '\2026'; /* ascii code for the ellipsis character */
+    width: 0px;
+  }
+
+  @keyframes ellipsis {
+    to {
+      width: 15px;
+    }
+  }
+
+  @-webkit-keyframes ellipsis {
+    to {
+      width: 15px;
+    }
+  }
+  .last-updated {
+    color: white;
+    font-size: 12px;
+  }
+  .signin-button {
+    padding-left: 16px;
+    padding-right: 16px;
+    background-color: hsla(0, 0%, 100%, 0.2);
+    color: #fff;
+    white-space: nowrap;
+    transition-property: background-color, opacity;
+    border: none;
+    border-radius: 16.5px;
+    padding-bottom: 6px;
+    padding-top: 3px;
+    padding-left: 16px;
+    padding-right: 12px;
+    font-weight: 500;
+    font-size: 15px;
+  }
+
+  .profile-container {
+    position: absolute;
+    top: 2rem;
+    right: 5rem;
+    cursor: pointer;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+}

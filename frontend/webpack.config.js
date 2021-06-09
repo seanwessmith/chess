@@ -13,7 +13,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'build'),
     filename: 'bundle.[contenthash].js', // Adds a hash code when there are changes on the code
-    publicPath: '/',
+    publicPath: '',
     assetModuleFilename: '[path][name].[contenthash].[ext]',
   },
   plugins: [

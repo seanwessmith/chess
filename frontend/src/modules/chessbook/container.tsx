@@ -1,13 +1,12 @@
-import { useState, useContext } from 'react';
+import { useState } from 'react';
 
 import Achievements from '../../components/achievements/container';
 import ChessBoard from '../../components/chess-board/container';
-import ImportUserDataModal from '../../components/modals/import-userdata';
+import NavBar from '../../components/navbar/container';
 import RankSelector from '../../components/rank-selector/container';
 import speedRunJson from '../../data/speedrun-games.json';
 import chessIcon from '../../images/icons/chess-icon.svg';
 import { PgnJson } from '../../shared/pgn';
-import { UserContext } from '../../store/userContext';
 
 import './container.scss';
 
@@ -16,8 +15,6 @@ function Chessbook(): JSX.Element {
   const [toggle, setToggle] = useState<'speedrun' | 'achievements'>(
     'speedrun'
   );
-  const { user, setUser } = useContext(UserContext);
-  const [modalVisible, setModalVisible] = useState(!user.showedModal);
 
   const slicedSpeedRunJson = (speedRunJson as PgnJson[]).filter(game => {
     const senseiDanya = game.white === 'SenseiDanya' ? 'whiteelo' : 'blackelo';
@@ -29,50 +26,12 @@ function Chessbook(): JSX.Element {
     return false;
   });
 
-  const handleClose = () => {
-    setModalVisible(false);
-    setUser({ ...user, showedModal: true });
-  };
-  const handleSubmit = () => {
-    setModalVisible(false);
-    setUser({ ...user, showedModal: true, fetchGames: true });
-  };
-  const handleLoadUserGames = () => {
-    setUser({ ...user, fetchGames: true });
-  };
-
   return (
     <div className='chessbook-module'>
-      <ImportUserDataModal
-        visible={modalVisible}
-        handleClose={() => handleClose()}
-        handleSubmit={() => handleSubmit()}
-      />
-      <nav>
-        <h1>chessbook</h1>
-        <p className={`hello${!user.username ? ' invisible' : ''}`}>
-            Hello <strong>{user.username}</strong>.{' '}
-          {user?.games?.length
-            ? `You've played ${user.games.length} games on Chess.com`
-            : <span className='loading'>loading matches</span>}
-        </p>
-        {user.lastUpdatedDate ? <p className='last-updated'>Last updated on {user.lastUpdatedDate}</p> : null}
-        {user.username && !user.fetchGames ? <button onClick={() => handleLoadUserGames()}>
-            Load latest matches
-        </button>
-        : null}
-        {!user.username ? (
-          <button
-            className='signin-button'
-            onClick={() => setModalVisible(true)}
-          >
-            Sign In
-          </button>
-        ) : null}
-      </nav>
+      <NavBar />
       <RankSelector rank={rank} setRank={setRank} />
       <section className='section-title'>
-        <img src={chessIcon} alt='chess-icon' />
+        <img src={chessIcon} />
         <p>Beginner to Master</p>
       </section>
       <ul className='toggler'>
@@ -95,9 +54,7 @@ function Chessbook(): JSX.Element {
           toggle === 'speedrun' ? '' : ' hide'
         }`}
       >
-        {slicedSpeedRunJson.map((game, key) => (
-          <ChessBoard key={`game-${key}`} size={500} pgn={game} />
-        ))}
+        {slicedSpeedRunJson.map(game => <ChessBoard key={`game-${game.chessComId}`} size={500} pgn={game} />)}
       </section>
       <section
         className={`achievements-container${
