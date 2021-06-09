@@ -8,7 +8,7 @@ import {
   PiecesTaken,
 } from '../../shared/fen';
 import { getPgnMoveCount, PgnJson, getCurrPgn } from '../../shared/pgn';
-// import { pgnToFen } from '../../shared/pgn-to-fen';
+import { pgnToFen } from '../../shared/pgn-to-fen';
 import Controls from './controls';
 import InfoDisplay from './info-display';
 import NameDisplay from './name-display';
@@ -46,7 +46,7 @@ const ChessBoard = (props: Props): JSX.Element => {
   const moves = JSON.parse(JSON.stringify(props.pgn?.moves || {}));
 
   const maxMoves = getPgnMoveCount(props.pgn?.moves);
-  // const [PgnToFen, _setPgnToFen] = useState(new pgnToFen(moves, props.pgn?.speedRunId?.toString() || ''));
+  const [PgnToFen, _setPgnToFen] = useState(new pgnToFen(moves, props.pgn?.speedRunId?.toString() || ''));
   const [move, setMove] = useState(props.move !== undefined ? props.move : 0);
 
   const [piecesTaken, setPiecesTaken] = useState<PiecesTaken>({
@@ -56,12 +56,13 @@ const ChessBoard = (props: Props): JSX.Element => {
   const [squares, setSquares] = useState<JSX.Element[]>([]);
 
   useEffect(() => {
-    // const newFen = PgnToFen.getFen(move);
-    // if (!newFen) {
-    //   return;
-    // }
+    const newFen = PgnToFen.getFen(move);
+    if (!newFen) {
+      return;
+    }
 
-    const newFen = 'r2qk2r/p1p1p2p/1pn1bnp1/3p1p2/P1P4R/4P1N1/1P1P1PP1/R1BQKBN1 w KQkq - 0 1';
+    // antonia's fen
+    // const newFen = 'r2qk2r/p1p1p2p/1pn1bnp1/3p1p2/P1P4R/4P1N1/1P1P1PP1/R1BQKBN1 w KQkq - 0 1';
     setPiecesTaken(getPiecesTaken(newFen));
 
     const ranks = rotate ? newFen.split(' ')[0].split('/').reverse() : newFen.split(' ')[0].split('/');
