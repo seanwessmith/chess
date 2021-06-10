@@ -60,8 +60,17 @@ nav {
     top: 2rem;
     right: 5rem;
     cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
 
-    &:hover {
+    .button-wrapper {
+      background-color: transparent;
+      padding: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    &:hover img {
       opacity: .7;
     }
   }

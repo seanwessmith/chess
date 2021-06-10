@@ -65,7 +65,7 @@ const reducer = (user: UserState, newUser: UserState) => {
   return { ...user, ...newUser };
 };
 
-const initialState: UserState = {
+export const initialState: UserState = {
   fetchGames: false,
   fetchedGames: false,
   username: undefined,

@@ -3,6 +3,7 @@ import { useContext, useState } from 'react';
 import ImportUserDataModal from '../../components/modals/import-userdata';
 import profileIcon from '../../images/nav/profile-icon.svg';
 import { UserContext } from '../../store/userContext';
+import DropDown from '../dropdown/container';
 
 import './style.scss';
 
@@ -10,6 +11,7 @@ const NavBar = () => {
   const { user, setUser } = useContext(UserContext);
 
   const [modalVisible, setModalVisible] = useState(!user.showedModal);
+  const [dropDownVisible, setDropDownVisible] = useState(false);
   const handleLoadUserGames = () => {
     setUser({ ...user, fetchGames: true });
   };
@@ -36,7 +38,7 @@ const NavBar = () => {
         {user?.games?.length ? (
           `You've played ${user.games.length} games on Chess.com`
         ) : (
-          <span className='loading'>loading matches</span>
+          user.fetchGames ? <span className='loading'>loading matches</span> : null
         )}
       </p>
       {user.lastUpdatedDate ? (
@@ -52,9 +54,14 @@ const NavBar = () => {
           Sign In
         </button>
       ) : null}
-      <div className='profile-container'>
-        <img src={profileIcon} />
-      </div>
+      {user.username ? (
+        <div className='profile-container'>
+          <button className='button-wrapper' onClick={() => setDropDownVisible(!dropDownVisible)}>
+            <img src={profileIcon} />
+          </button>
+          {dropDownVisible && <DropDown />}
+        </div>
+      ) : null}
     </nav>
   );
 };

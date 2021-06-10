@@ -62,7 +62,7 @@ const ChessBoard = (props: Props): JSX.Element => {
     }
 
     // antonia's fen
-    // const newFen = 'r2qk2r/p1p1p2p/1pn1bnp1/3p1p2/P1P4R/4P1N1/1P1P1PP1/R1BQKBN1 w KQkq - 0 1';
+    // const newFen = 'r2qk2r/p1p1p2p/1pn1bnp1/3p1p2/P1P4R/4P1N1/1P1P1PP1/R1BQKBN1 b KQkq - 0 1';
     setPiecesTaken(getPiecesTaken(newFen));
 
     const ranks = rotate ? newFen.split(' ')[0].split('/').reverse() : newFen.split(' ')[0].split('/');
