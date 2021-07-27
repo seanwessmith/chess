@@ -47,8 +47,6 @@ module.exports = {
       },
       {
         test: /\.(svg|jpg|jpeg|png|gif|mp3)$/,
-        exclude: [path.resolve(__dirname, 'src/icon'), /node_modules\/(?!(@paladin-cyber\/.*)|@paladin-cyber\/?$)/],
-        include: [path.resolve(__dirname, 'src'), path.resolve(__dirname, 'node_modules/@paladin-cyber/paladin-design')],
         type: 'asset/inline'
       },
     ],
